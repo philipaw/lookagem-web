@@ -1,0 +1,22 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "noEmit": false,
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "./dist",
+        "emitDeclarationOnly": true
+    },
+    "include": [
+        "src/lib/index.ts",
+        "src/lib/LookagemWeb.tsx",
+        "src/App.tsx",
+        "src/components/**/*",
+        "src/contexts/**/*"
+    ],
+    "exclude": [
+        "src/main.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx"
+    ]
+}
