@@ -15,3 +15,4 @@ export { ThemeProvider, useTheme } from "../contexts/ThemeContext";
 
 // Main component export (named export instead of default)
 export { default as LookagemWeb } from "./LookagemWeb.tsx";
+export { mountLookagemWeb } from "./LookagemWeb.tsx";
