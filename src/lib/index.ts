@@ -14,5 +14,5 @@ export { AuthProvider, useAuth } from "../contexts/AuthContext";
 export { ThemeProvider, useTheme } from "../contexts/ThemeContext";
 
 // Main component export (named export instead of default)
-export { default as LookagemWeb } from "./LookagemWeb.tsx";
-export { mountLookagemWeb } from "./LookagemWeb.tsx";
+export { default as LookagemWeb } from "./LookagemWeb";
+export { mountLookagemWeb } from "./LookagemWeb";
