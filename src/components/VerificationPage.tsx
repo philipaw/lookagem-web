@@ -7,7 +7,7 @@ export default function VerificationPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [resendCooldown, setResendCooldown] = useState(30);
-  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const inputRefs = useRef<HTMLInputElement[]>([]);
   const navigate = useNavigate();
   const { userData, verifyCode, sendVerificationCode } = useAuth();
 
@@ -149,7 +149,9 @@ export default function VerificationPage() {
               {code.map((digit, index) => (
                 <input
                   key={index}
-                  ref={(el) => (inputRefs.current[index] = el)}
+                  ref={(el) => {
+                    el && (inputRefs.current[index] = el);
+                  }}
                   type="text"
                   inputMode="numeric"
                   maxLength={1}
